@@ -1,0 +1,32 @@
+export const profile = {
+  name: "Divyam Kumar",
+  brand: "Fanspark Media",
+  title: "Social Media Manager & Content Strategist",
+  tagline: "Helping Creators & Brands Grow Through Strategic Content, Social Media Management, and Data-Driven Growth.",
+  taglineAlt: "I turn content into growth by combining strategy, analytics, and creative execution across Instagram, YouTube, and LinkedIn.",
+  philosophy: "I don't just create content — I build strategic content systems that help creators and brands grow consistently through data, creativity, and long-term thinking.",
+  availability: "Open to Projects",
+  location: "India",
+  languages: ["English", "Hindi"],
+  experience: "1+ Year",
+  about: [
+    "I'm Divyam Kumar, the founder of Fanspark Media, where I help creators, startups, and businesses build a stronger digital presence through strategic content and social media management.",
+    "Over the past year, I've worked on content planning, platform audits, growth analysis, and performance-driven strategies that help brands grow consistently. My approach goes beyond creating content — I focus on understanding audience behavior, identifying growth opportunities, and building systems that deliver long-term results.",
+    "From developing content calendars and writing engaging scripts to conducting detailed Instagram and YouTube audits, I believe successful social media is driven by strategy, creativity, and data working together.",
+    "Whether it's increasing engagement, improving content performance, or helping creators move toward YouTube monetization, my goal is simple: create content that delivers measurable growth instead of just generating views.",
+  ],
+  differentiators: [
+    "Strategy-first approach",
+    "Data-driven decision making",
+    "Focus on sustainable organic growth",
+    "Creative content backed by analytics",
+    "Clear communication and organized workflows",
+    "Long-term brand-building mindset",
+  ],
+  platforms: ["Instagram", "YouTube", "LinkedIn"],
+  cta: {
+    primary: "View My Work",
+    secondary: "See Results",
+    contact: "Let's Talk",
+  },
+};

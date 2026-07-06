@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Clash Display via Fontshare CDN */
+@font-face {
+  font-family: 'Clash Display';
+  src: url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design Tokens ───────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg: #F8FAFC;          /* Sleek soft grey-white */
+  --surface: #FFFFFF;     /* Premium clean white surfaces */
+  --card: #FFFFFF;        /* Crisp white cards with 3D drop-shadows */
+  --card-hover: #F1F5F9;  /* Soft cool-grey hover */
+
+  /* Borders */
+  --border: rgba(15, 23, 42, 0.08);        /* Subtly defined dark borders */
+  --border-hover: rgba(15, 23, 42, 0.16);  /* More prominent border on interaction */
+
+  /* Accents - Premium high-class electric blue, deep cyan/teal, and rich violet */
+  --blue: #2563EB;        /* Classy Royal/Electric Blue */
+  --blue-light: #3B82F6;
+  --cyan: #0D9488;        /* Elegant Deep Teal */
+  --violet: #6366F1;      /* Rich Royal Indigo */
+  --violet-light: #8B5CF6;
+
+  /* Text - High contrast luxury typography */
+  --text-primary: #0F172A;   /* Sleek Slate-900 */
+  --text-secondary: #475569; /* Balanced Slate-600 */
+  --text-muted: #64748B;     /* Muted Slate-500 */
+
+  /* Glows - Light version (soft shadow glows for 3D realism) */
+  --glow-blue: rgba(37, 99, 235, 0.04);
+  --glow-violet: rgba(99, 102, 241, 0.04);
+  --glow-cyan: rgba(13, 148, 136, 0.03);
+
+  /* Glass - Light mode glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(15, 23, 42, 0.06);
+  --glass-shadow: 0 8px 32px rgba(15, 23, 42, 0.05);
+}
+
+/* ─── Base Reset ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+  cursor: auto;
+}
+
+@media (max-width: 768px) {
+  body { cursor: auto; }
+}
+
+/* ─── Typography ─────────────────────────────────────────── */
+.font-clash {
+  font-family: 'Clash Display', system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ─── Gradient Text ──────────────────────────────────────── */
+.text-gradient {
+  background: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 50%, var(--violet-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-violet {
+  background: linear-gradient(135deg, var(--violet) 0%, var(--violet-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Glass Morphism ──────────────────────────────────────── */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(37, 99, 235, 0.2);
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.12), 0 0 30px var(--glow-blue);
+}
+
+/* ─── Glow Effects ────────────────────────────────────────── */
+.glow-blue {
+  box-shadow: 0 0 40px var(--glow-blue), 0 0 80px rgba(59, 130, 246, 0.05);
+}
+
+.glow-violet {
+  box-shadow: 0 0 40px var(--glow-violet), 0 0 80px rgba(124, 58, 237, 0.05);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 40px var(--glow-cyan);
+}
+
+/* ─── Scroll Progress ─────────────────────────────────────── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyan), var(--blue), var(--violet));
+  z-index: 9999;
+  transform-origin: left;
+}
+
+/* ─── Animated Orbs ───────────────────────────────────────── */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.2;
+  pointer-events: none;
+  animation: float 10s ease-in-out infinite;
+}
+
+.orb-blue { background: radial-gradient(circle, var(--blue), transparent 70%); }
+.orb-violet { background: radial-gradient(circle, var(--violet), transparent 70%); }
+.orb-cyan { background: radial-gradient(circle, var(--cyan), transparent 70%); }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-20px) rotate(5deg); }
+  66% { transform: translateY(10px) rotate(-3deg); }
+}
+
+/* ─── Aurora Background ───────────────────────────────────── */
+.aurora-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.aurora-layer {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.12;
+  animation: aurora 12s ease-in-out infinite;
+}
+
+@keyframes aurora {
+  0%, 100% { transform: scale(1) translateX(0) translateY(0); opacity: 0.12; }
+  25% { transform: scale(1.1) translateX(5%) translateY(-5%); opacity: 0.18; }
+  50% { transform: scale(0.95) translateX(-3%) translateY(8%); opacity: 0.10; }
+  75% { transform: scale(1.05) translateX(8%) translateY(3%); opacity: 0.15; }
+}
+
+/* ─── Grid Pattern ────────────────────────────────────────── */
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ─── Dot Pattern ─────────────────────────────────────────── */
+.dot-pattern {
+  background-image: radial-gradient(rgba(59, 130, 246, 0.08) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* ─── Section Layout ──────────────────────────────────────── */
+.section-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+/* ─── Section Label ───────────────────────────────────────── */
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-label::before {
+  content: '//';
+  opacity: 0.5;
+}
+
+/* ─── Custom Cursor ───────────────────────────────────────── */
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--cyan);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99998;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.15s ease;
+}
+
+.cursor-ring.hovering {
+  width: 48px;
+  height: 48px;
+  border-color: var(--blue);
+  background: rgba(59, 130, 246, 0.08);
+}
+
+@media (max-width: 768px) {
+  .cursor-dot, .cursor-ring { display: none; }
+}
+
+/* ─── Magnetic Button ─────────────────────────────────────── */
+.magnetic-btn {
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
+
+/* ─── Portfolio Cards ─────────────────────────────────────── */
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 0.4s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15), 0 0 40px var(--glow-blue);
+}
+
+.portfolio-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-card-overlay {
+  opacity: 1;
+}
+
+/* ─── Navigation ──────────────────────────────────────────── */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--blue);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ─── Loading Screen ──────────────────────────────────────── */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* ─── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--blue), var(--violet));
+  border-radius: 2px;
+}
+
+/* ─── Selection ───────────────────────────────────────────── */
+::selection {
+  background: rgba(59, 130, 246, 0.25);
+  color: var(--text-primary);
+}
+
+/* ─── Focus ───────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
+}
+
+/* ─── Horizontal Scroll ───────────────────────────────────── */
+.horizontal-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 1rem;
+}
+
+.horizontal-scroll::-webkit-scrollbar { display: none; }
+
+.horizontal-scroll > * {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* ─── Stat Card Animation ─────────────────────────────────── */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Pulse Glow ──────────────────────────────────────────── */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px var(--glow-blue); }
+  50% { box-shadow: 0 0 40px var(--glow-blue), 0 0 60px rgba(59, 130, 246, 0.1); }
+}
+
+/* ─── Shimmer ─────────────────────────────────────────────── */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.03) 0%,
+    rgba(255,255,255,0.08) 50%,
+    rgba(255,255,255,0.03) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .section-container {
+    padding: 0 1.25rem;
+  }
+  body {
+    cursor: auto;
+  }
+}

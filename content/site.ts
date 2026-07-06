@@ -1,0 +1,25 @@
+export const siteConfig = {
+  name: "Divyam Kumar",
+  title: "Divyam Kumar — Social Media Manager & Content Strategist",
+  description:
+    "Helping creators, startups, and businesses grow through strategic social media management, content planning, YouTube growth, Instagram strategy, and performance-driven content systems. Explore the portfolio of Divyam Kumar, Founder of Fanspark Media.",
+  url: "https://divyamkumar.dev",
+  ogImage: "/og-image.png",
+  twitterHandle: "@divyamkumar",
+  keywords: [
+    "Social Media Manager",
+    "Content Strategist",
+    "Instagram Growth Expert",
+    "YouTube Growth Strategist",
+    "Content Marketing Portfolio",
+    "Social Media Portfolio",
+    "Personal Brand Strategist",
+    "Fanspark Media",
+    "Divyam Kumar",
+    "Social Media Management India",
+    "Content Creator Growth",
+    "YouTube Monetization Strategy",
+    "Instagram Audit",
+    "Organic Growth Strategy",
+  ],
+};
