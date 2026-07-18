@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const basePath = "/divyam-portfolio";
+const basePath = "/divyam_portfolio";
 
 const nextConfig: NextConfig = {
   output: "export",
