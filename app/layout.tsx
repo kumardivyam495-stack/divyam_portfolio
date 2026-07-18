@@ -90,7 +90,7 @@ export default function RootLayout({
               description: siteConfig.description,
               worksFor: {
                 "@type": "Organization",
-                name: "Fanspark Media",
+                name: "Coffeee Media",
               },
               sameAs: [
                 "https://linkedin.com/in/divyamkumar",

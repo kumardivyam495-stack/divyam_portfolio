@@ -58,7 +58,7 @@ export default function Navbar() {
             </div>
             <div className="hidden sm:block">
               <p className="font-clash font-semibold text-text-primary text-sm leading-none">Divyam Kumar</p>
-              <p className="font-mono text-[10px] text-blue-600/70 tracking-widest mt-0.5 font-semibold">FANSPARK MEDIA</p>
+              <p className="font-mono text-[10px] text-blue-600/70 tracking-widest mt-0.5 font-semibold">COFFEEE MEDIA</p>
             </div>
           </button>
 

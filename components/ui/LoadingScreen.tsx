@@ -65,7 +65,7 @@ export default function LoadingScreen() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                Fanspark Media
+                Coffeee Media
               </motion.p>
               <motion.h1
                 className="font-clash text-2xl font-semibold text-text-primary"

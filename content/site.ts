@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Divyam Kumar",
   title: "Divyam Kumar — Social Media Manager & Content Strategist",
   description:
-    "Helping creators, startups, and businesses grow through strategic social media management, content planning, YouTube growth, Instagram strategy, and performance-driven content systems. Explore the portfolio of Divyam Kumar, Founder of Fanspark Media.",
+    "Helping creators, startups, and businesses grow through strategic social media management, content planning, YouTube growth, Instagram strategy, and performance-driven content systems. Explore the portfolio of Divyam Kumar, Founder of Coffeee Media.",
   url: "https://divyamkumar.dev",
   ogImage: "/og-image.png",
   twitterHandle: "@divyamkumar",
@@ -14,7 +14,7 @@ export const siteConfig = {
     "Content Marketing Portfolio",
     "Social Media Portfolio",
     "Personal Brand Strategist",
-    "Fanspark Media",
+    "Coffeee Media",
     "Divyam Kumar",
     "Social Media Management India",
     "Content Creator Growth",

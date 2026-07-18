@@ -86,7 +86,7 @@ export default function AboutSection() {
                     <>
                   I&apos;m{" "}
                   <span className="text-text-primary font-semibold">Divyam Kumar</span>, the founder of{" "}
-                  <span className="text-gradient font-semibold">Fanspark Media</span>, where I help creators, startups, and businesses build a stronger digital presence through strategic content and social media management.
+                  <span className="text-gradient font-semibold">Coffeee Media</span>, where I help creators, startups, and businesses build a stronger digital presence through strategic content and social media management.
                 </>
               ) : para}
             </motion.p>

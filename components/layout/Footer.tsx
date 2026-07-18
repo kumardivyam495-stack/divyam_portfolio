@@ -37,7 +37,7 @@ export default function Footer() {
               </div>
               <div>
                 <p className="font-clash font-semibold text-text-primary text-sm">Divyam Kumar</p>
-                <p className="font-mono text-[10px] text-blue-600/70 tracking-widest font-semibold">FANSPARK MEDIA</p>
+                <p className="font-mono text-[10px] text-blue-600/70 tracking-widest font-semibold">COFFEEE MEDIA</p>
               </div>
             </div>
             <p className="text-text-secondary text-sm leading-relaxed max-w-xs">
@@ -104,7 +104,7 @@ export default function Footer() {
           style={{ borderTop: "1px solid var(--border)" }}
         >
           <p className="text-text-muted text-xs">
-            © 2026 Divyam Kumar. All Rights Reserved. · Founder of Fanspark Media
+            © 2026 Divyam Kumar. All Rights Reserved. · Founder of Coffeee Media
           </p>
           <p className="text-text-muted text-xs font-mono">
             Built with Next.js · Tailwind CSS · Framer Motion

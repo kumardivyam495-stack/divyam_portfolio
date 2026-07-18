@@ -162,7 +162,7 @@ export default function StatsSection() {
             <span className="text-gradient">I build strategic content systems</span>{" "}
             that compound over time.&rdquo;
           </blockquote>
-          <p className="font-mono text-xs text-text-muted mt-4">— Divyam Kumar, Founder of Fanspark Media</p>
+          <p className="font-mono text-xs text-text-muted mt-4">— Divyam Kumar, Founder of Coffeee Media</p>
         </motion.div>
       </div>
     </section>

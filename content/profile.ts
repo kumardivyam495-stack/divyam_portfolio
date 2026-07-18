@@ -1,6 +1,6 @@
 export const profile = {
   name: "Divyam Kumar",
-  brand: "Fanspark Media",
+  brand: "Coffeee Media",
   title: "Social Media Manager & Content Strategist",
   tagline: "Helping Creators & Brands Grow Through Strategic Content, Social Media Management, and Data-Driven Growth.",
   taglineAlt: "I turn content into growth by combining strategy, analytics, and creative execution across Instagram, YouTube, and LinkedIn.",
@@ -10,7 +10,7 @@ export const profile = {
   languages: ["English", "Hindi"],
   experience: "1+ Year",
   about: [
-    "I'm Divyam Kumar, the founder of Fanspark Media, where I help creators, startups, and businesses build a stronger digital presence through strategic content and social media management.",
+    "I'm Divyam Kumar, the founder of Coffeee Media, where I help creators, startups, and businesses build a stronger digital presence through strategic content and social media management.",
     "Over the past year, I've worked on content planning, platform audits, growth analysis, and performance-driven strategies that help brands grow consistently. My approach goes beyond creating content — I focus on understanding audience behavior, identifying growth opportunities, and building systems that deliver long-term results.",
     "From developing content calendars and writing engaging scripts to conducting detailed Instagram and YouTube audits, I believe successful social media is driven by strategy, creativity, and data working together.",
     "Whether it's increasing engagement, improving content performance, or helping creators move toward YouTube monetization, my goal is simple: create content that delivers measurable growth instead of just generating views.",
